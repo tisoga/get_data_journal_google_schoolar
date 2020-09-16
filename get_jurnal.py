@@ -21,7 +21,7 @@ def writer_new(judul, tahun, penulis, loc):
 
 
 def add_urls():
-    url = input('Masukan Profile URL google schoolar yang ingin diambil datanya : ')
+    url = input('Masukan Profile URL google scholar yang ingin diambil datanya : ')
     urls.append(url)
     ask = input('Apakah ingin Memasukan URL lain ? (Y/N)')
     if ask.upper() == 'Y':
@@ -49,7 +49,7 @@ for url in urls:
         tabel = soup.find('tbody', id='gsc_a_b')
         row = tabel.find_all('tr', class_='gsc_a_tr')
     except:
-        print('Harap Masukan Profile URL Google Schoolar yang valid')
+        print('Harap Masukan Profile URL Google Scholar yang valid')
         break
 
     for data in row:
